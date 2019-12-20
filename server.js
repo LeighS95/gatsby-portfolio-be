@@ -44,7 +44,7 @@ app.post('/v1/mailer', function(req, res) {
     
     mailOpts = {
         from: `"Stephen Leigh" ${process.env.EMAIL_ADDRESS}`,
-        to: req.body.name + '&lt;' + req.body.email + '&gt;',
+        to: req.body.name + '&lt;' + req.body.email,
         subject: 'Thank you for your Request',
         html: "<h1>Here is my CV as Promised</h1>",
         attachments: [{
